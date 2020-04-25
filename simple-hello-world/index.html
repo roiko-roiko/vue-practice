@@ -16,6 +16,13 @@
             {{ todo.text }}
          </li>
       </ol>
+      <ol>
+         <todo-item
+            v-for="item in groceryList"
+            v-bind:todo="item"
+            v-bind:key="item.id"
+         ></todo-item>
+      </ol>
    </div>
    
    <script src="index.js"></script>
