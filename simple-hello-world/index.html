@@ -5,7 +5,17 @@
 </head>
 <body>
    <div id="app">
-      {{ message }}
+      <div v-bind:title="title">
+         {{ message }}
+      </div>
+      <button v-on:click="reverseMessage">Reverse Message</button>
+      <input v-model="message">
+      <div v-if="seen">Now you see me</div>
+      <ol>
+         <li v-for="todo in todos">
+            {{ todo.text }}
+         </li>
+      </ol>
    </div>
    
    <script src="index.js"></script>
